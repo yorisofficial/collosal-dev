@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main>
@@ -14,6 +16,28 @@ export default function Home() {
             sed?
           </p>
         </div>
+      </div>
+      <div className="flex h-screen w-full flex-col items-center justify-center">
+        <h1 className="text-start text-2xl font-semibold">
+          Documentasi Components
+        </h1>
+        <ul className="flex gap-2">
+          <li>
+            <Link href={"/component/style/Button"}>button</Link>
+          </li>
+          <li>
+            <Link href={"/"}></Link>
+          </li>
+          <li>
+            <Link href={"/"}></Link>
+          </li>
+          <li>
+            <Link href={"/"}></Link>
+          </li>
+          <li>
+            <Link href={"/"}></Link>
+          </li>
+        </ul>
       </div>
     </main>
   );

@@ -10,7 +10,7 @@
 
 body {
   color: rgba(var(--foreground-rgb));
-  background-color: black;
+  background-color: #0b0b22;
 }
 /* 
 :root {
