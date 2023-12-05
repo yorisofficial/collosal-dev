@@ -1,10 +1,26 @@
-import Link from "next/link";
+"use client";
 import Button from "./components/Button";
-import { IconBox, IconBrandFigma, IconCode } from "@tabler/icons-react";
+import {
+  IconBox,
+  IconBrandFigma,
+  IconCode,
+  IconQuotes,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import pricing from "@/app/data/pricelist/data.json";
+// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import ButtonSwiper from "./components/ButtonSwiper";
+import { useState } from "react";
 
 export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const handleSlideChange = (swiper: any) => {
+    setActiveSlide(swiper.activeIndex);
+  };
   const cardItems = [
     {
       title: "Design",
@@ -25,6 +41,48 @@ export default function Home() {
         "After the work is complete, we will send the project and all its assets to you.",
     },
   ];
+  const user = [
+    {
+      id: 0,
+      name: "Courtney Henry",
+      img: "/image/testimonial/Avatar1.png",
+      title: "Biffco Enterprises Ltd.",
+      quotes:
+        "Very easy to use. I made back the purchase price in just 48 hours! It's great. It's is both attractive and highly adaptable.",
+    },
+    {
+      id: 1,
+      name: "Esther Howard",
+      img: "/image/testimonial/Avatar2.png",
+      title: "Abstergo Ltd.",
+      quotes:
+        "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business.",
+    },
+    {
+      id: 2,
+      name: "Ronald Richards",
+      img: "/image/testimonial/Avatar3.png",
+      title: "Barone LLC.",
+      quotes:
+        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
+    },
+    {
+      id: 3,
+      name: "Ronald Richards",
+      img: "/image/testimonial/Avatar3.png",
+      title: "Barone LLC.",
+      quotes:
+        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
+    },
+    {
+      id: 4,
+      name: "Ronald Richards",
+      img: "/image/testimonial/Avatar3.png",
+      title: "Barone LLC.",
+      quotes:
+        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
+    },
+  ];
   const imgSponsor = [
     { tittle: "Facebook", src: "/image/brand-group/Facebook_Logo.svg" },
     { tittle: "Github", src: "/image/brand-group/Github_Logo.svg" },
@@ -34,7 +92,7 @@ export default function Home() {
   ];
   return (
     <main className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-16 xl:gap-32">
-      <div className="hero-section relative flex h-screen w-full items-center justify-center border">
+      <div className="hero-section relative flex h-screen w-full items-center justify-center">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
@@ -74,7 +132,7 @@ export default function Home() {
               </div>
             </div>
             <div className="body-card mt-4 flex flex-col items-center justify-center gap-4 xl:items-start xl:justify-start">
-              <h4 className="text-xl font-semibold capitalize">{item.title}</h4>
+              <h1 className="text-xl font-semibold capitalize">{item.title}</h1>
               <p className="text-center xl:text-start">{item.deskription}</p>
             </div>
           </div>
@@ -203,11 +261,11 @@ export default function Home() {
             >
               <div className="header flex justify-between md:flex-col xl:flex-row">
                 <div className="right-side">
-                  <h4 className="text-xl font-semibold">{item.title}</h4>
+                  <h1 className="text-xl font-semibold">{item.title}</h1>
                 </div>
                 <div className="left-side">
                   <span>Starting from</span>
-                  <h4 className="text-xl font-semibold">{item.price}$</h4>
+                  <h1 className="text-xl font-semibold">{item.price}$</h1>
                 </div>
               </div>
               <hr className="my-8" />
@@ -232,6 +290,71 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="our-reviews relative h-full w-full px-4 xl:px-44">
+        <div className="absolute left-0 top-0 flex h-full w-full items-center justify-between opacity-10 blur-3xl filter">
+          <div className="h-[500px] w-[700px] rounded-full bg-yellow-500"></div>
+          <div className="h-[500px] w-[700px] rounded-full bg-teal-500"></div>
+          <div className="h-[500px] w-[700px] rounded-full bg-pink-500"></div>
+        </div>
+
+        <Swiper
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          loop={false}
+          centeredSlides={true}
+          spaceBetween={30}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
+          onSlideChange={handleSlideChange}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <ButtonSwiper />
+
+          {user.map((item) => (
+            <SwiperSlide key={item.id} className="py-12">
+              <div
+                className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md border-2 bg-white/10 bg-opacity-40 px-4 backdrop-blur-md ${
+                  activeSlide === item.id
+                    ? "xl:-translate-y-6 xl:scale-100"
+                    : "xl:translate-y-4 xl:scale-90"
+                }`}
+              >
+                <div className="relative">
+                  <Image
+                    className="rounded-full"
+                    src={item.img}
+                    width={100}
+                    height={100}
+                    alt="image"
+                  />
+                  <div className="quotes absolute -bottom-2 -right-2 h-fit w-fit rounded-full border-4 border-black bg-[#6016FC] p-1">
+                    <IconQuotes size={20} />
+                  </div>
+                </div>
+                <div className="flex w-full flex-col items-center justify-center gap-8">
+                  <div className="w-full text-center">
+                    <h1 className="text-xl font-semibold">{item.name}</h1>
+                    <p className="">{item.title}</p>
+                  </div>
+                  <p className="text-center">{item.quotes}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </main>
   );
