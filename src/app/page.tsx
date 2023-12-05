@@ -25,9 +25,16 @@ export default function Home() {
         "After the work is complete, we will send the project and all its assets to you.",
     },
   ];
+  const imgSponsor = [
+    { tittle: "Facebook", src: "/image/brand-group/Facebook_Logo.svg" },
+    { tittle: "Github", src: "/image/brand-group/Github_Logo.svg" },
+    { tittle: "Forbes", src: "/image/brand-group/Forbes_Logo.svg" },
+    { tittle: "Google", src: "/image/brand-group/Google_Logo.svg" },
+    { tittle: "Microsoft", src: "/image/brand-group/Microsoft_Logo.svg" },
+  ];
   return (
-    <main className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-16 xl:gap-32 xl:py-32">
-      <div className="hero-section relative mt-8 flex h-fit w-full items-center justify-center">
+    <main className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-16 xl:gap-32">
+      <div className="hero-section relative flex h-screen w-full items-center justify-center border">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
@@ -49,17 +56,17 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="absolute z-0 h-full w-full opacity-10 blur-3xl filter">
-          <div className="absolute -left-1/4 -top-1/4 z-10 h-[700px] w-[700px] rounded-full bg-yellow-500"></div>
-          <div className="absolute -top-1/2 right-0 z-0 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-teal-500"></div>
-          <div className="absolute -top-1/3 right-0 z-10 h-[700px] w-[700px] -translate-y-1/3 rounded-full bg-pink-600"></div>
+        <div className="absolute h-full w-full opacity-10 blur-3xl filter xl:block">
+          <div className="absolute -left-1/4 -top-1/4 z-10 h-32 w-32 rounded-full bg-yellow-500 xl:h-[700px] xl:w-[700px]"></div>
+          <div className="absolute -top-1/2 right-0 z-0 h-32 w-32 -translate-x-1/2 rounded-full bg-teal-500 xl:h-[700px] xl:w-[700px]"></div>
+          <div className="absolute -top-1/3 right-0 z-10 h-32 w-32 -translate-y-1/3 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
         </div>
       </div>
-      <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-8 xl:grid-cols-3 xl:px-44">
+      <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 md:grid-cols-3 xl:gap-8 xl:px-44">
         {cardItems.map((item, index) => (
           <div
             key={index}
-            className="card-item flex min-w-[300px] flex-col items-center justify-center rounded-md bg-white/10 p-8 backdrop-blur-xl  xl:items-start xl:justify-start"
+            className="card-item flex h-full w-full flex-col items-center justify-center rounded-md bg-white/10 p-8 backdrop-blur-xl xl:min-w-[300px]  xl:items-start xl:justify-start"
           >
             <div className="head-card">
               <div className="h-full w-fit rounded-md bg-white/10 p-2">
@@ -75,41 +82,16 @@ export default function Home() {
       </div>
       <div className="logo-group relative flex h-full w-full items-center justify-center gap-8 xl:px-44">
         <div className=" flex w-full flex-wrap items-center justify-center gap-8">
-          <Image
-            src={"/image/brand-group/Github_Logo.svg"}
-            alt="Bran Github"
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={"/image/brand-group/Forbes_Logo.svg"}
-            alt="Bran Forbes"
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={"/image/brand-group/Google_Logo.svg"}
-            alt="Bran Google"
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={"/image/brand-group/Facebook_Logo.svg"}
-            alt="Bran Facebook"
-            width={100}
-            height={100}
-            className=""
-          />
-          <Image
-            src={"/image/brand-group/Microsoft_Logo.svg"}
-            alt="Bran Microsoft"
-            width={100}
-            height={100}
-            className=""
-          />
+          {imgSponsor.map((item, index) => (
+            <Image
+              key={index}
+              src={item.src}
+              alt={item.tittle}
+              width={100}
+              height={100}
+              className="h-fit w-fit"
+            />
+          ))}
         </div>
       </div>
       <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center xl:grid-cols-2 xl:px-44">
@@ -130,7 +112,7 @@ export default function Home() {
             <div className="absolute -top-1/4 left-8 z-0 h-80 w-80 -translate-y-1/2 rounded-full bg-teal-500"></div>
           </div>
         </div>
-        <div className="body-content">
+        <div className="body-content flex flex-col items-center justify-center">
           <p className="w-full text-center font-semibold text-[#16FCD2] xl:text-start">
             HOW WE WORK?
           </p>
@@ -159,8 +141,8 @@ export default function Home() {
             <div className="dot-acc absolute right-12 h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm xl:-top-1/2 xl:right-1/4"></div>
           </div>
         </div>
-        <div className="body-content flex w-full flex-col items-center justify-center gap-8 xl:flex-row xl:items-start">
-          <div className="phone-mode w-full max-w-[500px]">
+        <div className="body-content flex w-full flex-col items-center justify-center gap-8 md:flex-row xl:items-start">
+          <div className="phone-mode w-full xl:min-w-[500px]">
             <div className="phone-mockup flex w-full flex-col items-center justify-center gap-6 rounded-t-md bg-white/10 p-8 pb-0">
               <div className="h-6 w-44 rounded-full bg-white/10"></div>
               <div className="h-6 w-32 rounded-full bg-white/10"></div>
@@ -178,7 +160,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="desktop-mode w-full min-w-[500px]">
+          <div className="desktop-mode w-full xl:min-w-[500px]">
             <div className="phone-mockup flex w-full flex-col items-center justify-center gap-6 rounded-t-md bg-white/10 p-8 pb-0">
               <div className="h-6 w-44 rounded-full bg-white/10"></div>
               <div className="h-6 w-32 rounded-full bg-white/10"></div>
@@ -205,7 +187,7 @@ export default function Home() {
             What do you need? Choose a service that can help you
           </h1>
         </div>
-        <div className="body-content grid w-full grid-cols-1 gap-4 xl:w-fit xl:grid-cols-3">
+        <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-fit">
           {pricing.map((item, index) => (
             <div
               key={item.id}
@@ -219,7 +201,7 @@ export default function Home() {
                       : null
               }`}
             >
-              <div className="header flex justify-between">
+              <div className="header flex justify-between md:flex-col xl:flex-row">
                 <div className="right-side">
                   <h4 className="text-xl font-semibold">{item.title}</h4>
                 </div>
@@ -235,10 +217,10 @@ export default function Home() {
                     key={index}
                     className="flex w-full flex-col items-center justify-center gap-4"
                   >
-                    <p>{service.list1}</p>
-                    <p>{service.list2}</p>
-                    <p>{service.list3}</p>
-                    <p>{service.list4}</p>
+                    <p className="text-center">{service.list1}</p>
+                    <p className="text-center">{service.list2}</p>
+                    <p className="text-center">{service.list3}</p>
+                    <p className="text-center">{service.list4}</p>
                   </div>
                 ))}
               </div>
