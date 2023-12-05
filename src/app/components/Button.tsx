@@ -40,24 +40,24 @@ const Button: React.FC<ButtonProps> = ({
     secondaryRounded:
       "rounded-full border-2 border-zinc-500 bg-zinc-500 font-semibold bg-opacity-40 border-opacity-10",
     borderlessRounded:
-      "rounded-full border-2 border-[#6016FC] bg-transparent text-[#6016FC] font-semibold",
+      "rounded-full border border-[#6016FC] bg-transparent text-[#6016FC] font-semibold",
     primaryWhite:
       "rounded border-2 border-white bg-white text-zinc-900 font-semibold",
     secondaryWhite:
       "rounded border-2 border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40 font-semibold text-white",
     borderlessWhite:
-      "rounded border-2 border-white text-white bg-transparent text-white font-semibold",
+      "rounded border border-white text-white bg-transparent text-white font-semibold",
     primaryRoundedWhite:
       "rounded-full border-2 border-white text-zinc-900 bg-white font-semibold",
     secondaryRoundedWhite:
       "rounded-full border-2 border-zinc-500 text-white bg-zinc-500 font-semibold bg-opacity-40 border-opacity-10",
     borderlessRoundedWhite:
-      "rounded-full border-2 border-white bg-transparent text-white font-semibold",
+      "rounded-full border border-white bg-transparent text-white font-semibold",
   };
 
   const buttonSize = {
     small: "px-6 py-3 text-[14px]",
-    large: "px-14 py-4 text-[16px]",
+    large: "xl:px-14 xl:py-4 px-6 py-4 xl:text-[16px]",
   };
 
   const buttonVariant = `${getButtonVariant[variant]} ${buttonSize[size]} ${className}`;
