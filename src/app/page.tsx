@@ -34,7 +34,7 @@ export default function Home() {
   ];
   return (
     <main className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-16 xl:gap-32">
-      <div className="hero-section relative flex h-screen w-full items-center justify-center border">
+      <div className="hero-section relative flex h-screen w-full items-center justify-center">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
             <div className="body-card mt-4 flex flex-col items-center justify-center gap-4 xl:items-start xl:justify-start">
-              <h4 className="text-xl font-semibold capitalize">{item.title}</h4>
+              <h1 className="text-xl font-semibold capitalize">{item.title}</h1>
               <p className="text-center xl:text-start">{item.deskription}</p>
             </div>
           </div>
@@ -203,11 +203,11 @@ export default function Home() {
             >
               <div className="header flex justify-between md:flex-col xl:flex-row">
                 <div className="right-side">
-                  <h4 className="text-xl font-semibold">{item.title}</h4>
+                  <h1 className="text-xl font-semibold">{item.title}</h1>
                 </div>
                 <div className="left-side">
                   <span>Starting from</span>
-                  <h4 className="text-xl font-semibold">{item.price}$</h4>
+                  <h1 className="text-xl font-semibold">{item.price}$</h1>
                 </div>
               </div>
               <hr className="my-8" />

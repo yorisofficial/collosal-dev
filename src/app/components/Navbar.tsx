@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
   return (
     <div className="">
-      <nav className="fixed left-0 top-0 z-50 hidden w-full items-center justify-between bg-white/0 px-44 py-4 backdrop-blur-xl xl:flex">
+      <nav className="fixed left-0 top-0 z-50 hidden w-full items-center justify-between bg-white/0 npm ru py-4 backdrop-blur-xl xl:flex">
         <div className="header flex gap-3">
           <Link href={"/"} className="flex gap-4 text-3xl">
             <IconCopy size={32} />
