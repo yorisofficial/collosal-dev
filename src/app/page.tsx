@@ -209,7 +209,7 @@ export default function Home() {
           {pricing.map((item, index) => (
             <div
               key={item.id}
-              className={`card-item h-full w-full max-w-[328px] rounded-xl p-8 ${
+              className={`card-item h-full w-full rounded-xl p-8 xl:min-w-[380px] ${
                 item.id === 1
                   ? "bg-[#3F2379]"
                   : item.id === 2
