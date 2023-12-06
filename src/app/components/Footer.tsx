@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <div className="flex w-full flex-col gap-32 py-4">
       <SendQuotes />
-      <div className="grid h-full w-full grid-cols-2 gap-6 px-4 text-white/50 xl:grid-cols-4 xl:gap-3 xl:px-44">
-        <div className="content-footer brand-footer col-span-2 flex w-full flex-col items-center justify-center xl:col-span-1 xl:items-start xl:justify-start">
+      <div className="grid h-full w-full grid-cols-2 gap-6 px-4 text-white/50 md:grid-cols-3 xl:grid-cols-4 xl:gap-3 xl:px-44">
+        <div className="content-footer brand-footer col-span-2 flex w-full flex-col items-start justify-start md:col-span-3 xl:col-span-1">
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

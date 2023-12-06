@@ -115,10 +115,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="absolute h-full w-full opacity-10 blur-3xl filter xl:block">
-          <div className="absolute -left-1/4 -top-1/4 z-10 h-32 w-32 rounded-full bg-yellow-500 xl:h-[700px] xl:w-[700px]"></div>
-          <div className="absolute -top-1/2 right-0 z-0 h-32 w-32 -translate-x-1/2 rounded-full bg-teal-500 xl:h-[700px] xl:w-[700px]"></div>
-          <div className="absolute -top-1/3 right-0 z-10 h-32 w-32 -translate-y-1/3 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
+        <div className="absolute -z-10 h-full w-full opacity-10 blur-2xl filter xl:block">
+          <div className="-translate-y-1/5 -left-1/5 -top-1/5 absolute z-10 h-32 w-32 rounded-full bg-yellow-500 xl:h-[700px] xl:w-[700px]"></div>
+          <div className="absolute -top-1/4 right-0 z-0 h-32 w-32 -translate-x-1/2 rounded-full bg-teal-500 xl:h-[700px] xl:w-[700px]"></div>
+          <div className="-top-1/5 absolute right-0 z-10 h-32 w-32 -translate-y-1/4 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
         </div>
       </div>
       <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 md:grid-cols-3 xl:gap-8 xl:px-44">
