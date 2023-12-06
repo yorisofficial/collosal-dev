@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import ButtonSwiper from "./components/ButtonSwiper";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -313,12 +314,12 @@ export default function Home() {
           loop={false}
           centeredSlides={true}
           spaceBetween={30}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           onSlideChange={handleSlideChange}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, Autoplay]}
           className="mySwiper"
         >
           <ButtonSwiper />
@@ -326,7 +327,7 @@ export default function Home() {
           {user.map((item) => (
             <SwiperSlide key={item.id} className="py-12">
               <div
-                className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md border-2 bg-white/10 bg-opacity-40 px-4 backdrop-blur-md ${
+                className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md bg-white/10 bg-opacity-40 px-4 backdrop-blur-md ${
                   activeSlide === item.id
                     ? "xl:-translate-y-6 xl:scale-100"
                     : "xl:translate-y-4 xl:scale-90"
@@ -355,6 +356,14 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="relative h-full w-full">
+        <div className="absolute -z-10 h-full w-full">
+          <div className="dot-acc absolute bottom-0 right-0 h-8 w-8 rotate-45 rounded-full bg-indigo-600 blur-md"></div>
+          <div className="dot-acc absolute top-0 h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-md xl:right-16"></div>
+          <div className="dot-acc absolute h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-md xl:bottom-32 xl:left-16"></div>
+        </div>
+        <Footer />
       </div>
     </main>
   );
