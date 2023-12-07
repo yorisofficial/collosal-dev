@@ -85,7 +85,7 @@ const Navbar = () => {
             </div>
           </div>
         )}
-        <div className="desktop-menus hidden xl:block">
+        <div className="desktop-menus mt-4 hidden xl:block">
           <ul className="flex gap-14">
             {NAV_LINKS.map((menu, index) => (
               <li
