@@ -9,7 +9,7 @@ import { NAV_LINKS } from "../../../constants";
 const Navbar = () => {
   const PathName = usePathname();
   const navbarRef = useRef(null);
-  const [mobileMenu, setMobileMenu] = React.useState(true);
+  const [mobileMenu, setMobileMenu] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   useEffect(() => {
     const handleScroll = () => {

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
-import SendQuotes from "./components/SendQuotes";
 
 export default function NotFound() {
   return (

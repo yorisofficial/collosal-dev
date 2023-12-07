@@ -31,32 +31,25 @@ const Button: React.FC<ButtonProps> = ({
   size = "large",
 }) => {
   const getButtonVariant = {
-    primary:
-      "rounded border-2 border-[#6016FC] bg-[#6016FC] font-semibold whitespace-nowrap",
-    primaryQuote:
-      "w-full rounded border-2 border-[#6016FC] bg-[#6016FC] font-semibold whitespace-nowrap",
+    primary: "rounded border-[#6016FC] bg-[#6016FC]",
+    primaryQuote: "w-full rounded border-[#6016FC] bg-[#6016FC]",
     secondary:
-      "rounded border-2 border-zinc-500 bg-zinc-500 font-semibold whitespace-nowrap bg-opacity-40 border-opacity-10",
-    borderless:
-      "rounded border-2 border-[#6016FC] bg-transparent text-[#6016FC] font-semibold whitespace-nowrap",
-    primaryRounded:
-      "rounded-full border-2 border-[#6016FC] bg-[#6016FC] font-semibold whitespace-nowrap",
+      "rounded border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40",
+    borderless: "rounded border-[#6016FC] bg-transparent text-[#6016FC]",
+    primaryRounded: "rounded-full border-[#6016FC] bg-[#6016FC]",
     secondaryRounded:
-      "rounded-full border-2 border-zinc-500 bg-zinc-500 font-semibold whitespace-nowrap bg-opacity-40 border-opacity-10",
+      "rounded-full border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40",
     borderlessRounded:
-      "rounded-full border border-[#6016FC] bg-transparent text-[#6016FC] font-semibold whitespace-nowrap",
-    primaryWhite:
-      "rounded border-2 border-white bg-white text-zinc-900 font-semibold whitespace-nowrap",
+      "rounded-full border border-[#6016FC] bg-transparent text-[#6016FC]",
+    primaryWhite: "rounded border-white bg-white text-zinc-900",
     secondaryWhite:
-      "rounded border-2 border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40 font-semibold whitespace-nowrap text-white",
-    borderlessWhite:
-      "rounded border border-white text-white bg-transparent text-white font-semibold whitespace-nowrap",
-    primaryRoundedWhite:
-      "rounded-full border-2 border-white text-zinc-900 bg-white font-semibold whitespace-nowrap",
+      "rounded border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40 text-white",
+    borderlessWhite: "rounded border-white bg-transparent text-white",
+    primaryRoundedWhite: "rounded-full border-white bg-white text-zinc-900",
     secondaryRoundedWhite:
-      "rounded-full border-2 border-zinc-500 text-white bg-zinc-500 font-semibold whitespace-nowrap bg-opacity-40 border-opacity-10",
+      "rounded-full border-zinc-500 border-opacity-10 bg-zinc-500 bg-opacity-40 text-white",
     borderlessRoundedWhite:
-      "rounded-full border border-white bg-transparent text-white font-semibold whitespace-nowrap",
+      "rounded-full border border-white bg-transparent text-white",
   };
 
   const buttonSize = {
@@ -71,7 +64,7 @@ const Button: React.FC<ButtonProps> = ({
       <button
         aria-label={ariaLabel}
         onClick={onClick}
-        className={`${buttonVariant} capitalize duration-500 hover:scale-95 focus:ring focus:ring-white`}
+        className={`${buttonVariant} whitespace-nowrap border font-semibold capitalize duration-500 hover:scale-95 focus:ring focus:ring-white`}
       >
         {children}
       </button>

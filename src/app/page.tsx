@@ -1,23 +1,20 @@
 "use client";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Button from "./components/Button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import ButtonSwiper from "./components/ButtonSwiper";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { USERS_REVIEW, IMAGES_SPONSORS, PRICELIST } from "../../constants";
 import {
   IconBox,
   IconBrandFigma,
   IconCode,
   IconQuotes,
 } from "@tabler/icons-react";
-import Image from "next/image";
-import pricing from "@/app/data/pricelist/data.json";
-// Import Swiper styles
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import ButtonSwiper from "./components/ButtonSwiper";
-import { useState } from "react";
-import Footer from "./components/Footer";
-import { USERS_REVIEW, IMAGES_SPONSORS } from "../../constants";
-import Link from "next/link";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -46,6 +43,7 @@ export default function Home() {
   ];
   const user = USERS_REVIEW;
   const imgSponsor = IMAGES_SPONSORS;
+  const pristList = PRICELIST;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-16 py-4 xl:gap-32">
       <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center">
@@ -204,7 +202,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-fit">
-          {pricing.map((item, index) => (
+          {pristList.map((item, index) => (
             <div
               key={item.id}
               className={`card-item h-full w-full rounded-xl p-8 xl:min-w-[380px] ${
