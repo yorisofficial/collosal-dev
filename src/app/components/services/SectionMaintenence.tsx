@@ -30,7 +30,7 @@ const SectionMaintenence = () => {
               </div>
             </div>
           </div>
-          <div className="main-content flex h-full w-full flex-col gap-8 xl:order-2 xl:gap-14">
+          <div className="main-content flex h-full w-full flex-col items-start justify-center gap-8 xl:order-2 xl:gap-14">
             <div className="header-content flex flex-col gap-7">
               <div className="flex w-full flex-col items-center justify-center gap-1 xl:items-start">
                 <h1 className="text-center font-semibold uppercase text-[#16FCD2] md:text-start">
@@ -46,29 +46,41 @@ const SectionMaintenence = () => {
                 upgrade them when there is an update.
               </p>
             </div>
-            <div className="card-group flex flex-col items-center justify-center">
-              <div className="card-item grid grid-cols-2 gap-6">
-                <div className="flex items-center gap-6">
+            <div className="card-group flex w-full flex-col items-start justify-center">
+              <div className="card-item grid grid-cols-2 items-center justify-center gap-6">
+                <div className="group flex cursor-pointer items-center gap-6">
                   <div className="icon-div cursor-pointer bg-white/10 p-3">
-                    <IconDownload size={30} />
+                    <IconDownload
+                      size={30}
+                      className="group-hover:animate-bounce"
+                    />
                   </div>
                   <span>Back up every day</span>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="group flex cursor-pointer items-center gap-6">
                   <div className="icon-div cursor-pointer bg-white/10 p-3">
-                    <IconArrowUp size={30} />
+                    <IconArrowUp
+                      size={30}
+                      className="group-hover:animate-bounce"
+                    />
                   </div>
                   <span>Upgrade</span>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="group flex cursor-pointer items-center gap-6">
                   <div className="icon-div cursor-pointer bg-white/10 p-3">
-                    <IconRefresh size={30} />
+                    <IconRefresh
+                      size={30}
+                      className="group-hover:animate-bounce"
+                    />
                   </div>
                   <span>Cleaning every week</span>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="group flex cursor-pointer items-center gap-6">
                   <div className="icon-div cursor-pointer bg-white/10 p-3">
-                    <IconCircleCheck size={30} />
+                    <IconCircleCheck
+                      size={30}
+                      className="group-hover:animate-bounce"
+                    />
                   </div>
                   <span>Fixing error</span>
                 </div>

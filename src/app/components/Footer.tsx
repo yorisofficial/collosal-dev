@@ -8,8 +8,8 @@ const Footer = () => {
     <div className="flex w-full items-center justify-center">
       <div className="relative flex w-full max-w-screen-2xl flex-col gap-32 px-4 py-8 md:px-16 xl:px-44">
         <div className="absolute left-0 top-0 -z-10 h-full w-full">
-          <div className="dot-acc absolute right-4 top-0 h-8 w-8 rotate-45 rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-sm md:right-16 md:h-16 md:w-16 xl:top-0"></div>
-          <div className="dot-acc absolute bottom-2/3 left-4 h-8 w-8 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm md:left-16 md:h-16 md:w-16 xl:top-32"></div>
+          <div className="dot-acc absolute right-4 top-0 h-8 w-8 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-sm duration-500 md:right-16 md:h-16 md:w-16 xl:top-0"></div>
+          <div className="dot-acc absolute bottom-2/3 left-4 h-8 w-8 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm duration-500 md:left-16 md:h-16 md:w-16 xl:top-32"></div>
         </div>
         <div className="content-quote flex w-full flex-col">
           <div className="tems-center flex w-full flex-col justify-between xl:flex-row">

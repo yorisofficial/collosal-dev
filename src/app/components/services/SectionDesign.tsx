@@ -19,9 +19,9 @@ const SectionDesign = () => {
         <div className="body-content grid h-full w-full grid-cols-1 items-center justify-center gap-8 xl:grid-cols-2 xl:gap-14">
           <div className="image-content relative flex h-full w-full items-center justify-center xl:mt-0">
             <div className="absolute left-0 top-0 -z-10 h-full w-full">
-              <div className="dot-acc absolute right-0 top-0 -z-10 h-8 w-8 rotate-45 rounded-full bg-indigo-600 blur-sm xl:-top-16 xl:right-1/4"></div>
-              <div className="dot-acc absolute top-1/2 -z-10 h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-sm xl:-left-16 xl:top-1/2"></div>
-              <div className="dot-acc absolute bottom-0 right-0 -z-10 h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm xl:-bottom-16 xl:right-1/4"></div>
+              <div className="dot-acc absolute right-0 top-0 -z-10 h-8 w-8 rotate-45 animate-pulse rounded-full bg-indigo-600 blur-sm delay-0 duration-1000 xl:-top-16 xl:right-1/4"></div>
+              <div className="dot-acc absolute top-1/2 -z-10 h-16 w-16 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-sm delay-75 duration-200 xl:-left-16 xl:top-1/2"></div>
+              <div className="dot-acc absolute bottom-0 right-0 -z-10 h-16 w-16 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm delay-150 duration-500 xl:-bottom-16 xl:right-1/4"></div>
             </div>
             <div className="image-design relative z-20 h-full w-full p-4">
               <div className="ilustrastion flex h-full w-full items-center justify-center rounded-md">
@@ -51,7 +51,7 @@ const SectionDesign = () => {
               </p>
             </div>
             <div className="card-group grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="card-item -white/10 rounded-m flex h-full w-full flex-col  gap-4 bg-white/5 p-6 backdrop-blur-md">
+              <div className="card-item -white/10 flex h-full w-full cursor-pointer flex-col gap-4 rounded-md bg-white/5 p-6 backdrop-blur-md duration-500 hover:bg-white/20">
                 <div className="heading flex items-center gap-4">
                   <div className="icon w-fit">
                     <IconLayout2 size={30} />
@@ -60,7 +60,7 @@ const SectionDesign = () => {
                 </div>
                 <p>Create a modern design for your idea.</p>
               </div>
-              <div className="card-item -white/10 rounded-m flex h-full w-full flex-col  gap-4 bg-white/5 p-6 backdrop-blur-md">
+              <div className="card-item -white/10 flex h-full w-full cursor-pointer flex-col gap-4 rounded-md bg-white/5 p-6 backdrop-blur-md duration-500 hover:bg-white/20">
                 <div className="heading flex items-center gap-4">
                   <div className="icon w-fit">
                     <IconPointer size={30} />
@@ -73,9 +73,9 @@ const SectionDesign = () => {
             <div className="flex w-full items-center justify-end">
               <Link
                 href="/service"
-                className="group flex items-center gap-2 duration-500"
+                className="flex items-center gap-2 duration-500"
               >
-                Service Detail <IconArrowRight className="group-hover:ml-2" />
+                Service Detail <IconArrowRight size={32} />
               </Link>
             </div>
           </div>

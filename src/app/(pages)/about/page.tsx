@@ -1,10 +1,9 @@
-import Undercontruction from "@/app/components/services/Undercontruction";
-import React from "react";
+import Undercontruction from "@/app/components/Undercontruction";
 
 const page = () => {
   return (
     <div>
-      <Undercontruction />
+      <Undercontruction pageName="About" />
     </div>
   );
 };

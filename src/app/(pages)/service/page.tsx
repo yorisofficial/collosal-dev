@@ -1,4 +1,4 @@
-import SectionDev from "@/app/components/SectionDev";
+import SectionDev from "@/app/components/services/SectionDev";
 import SectionDesign from "@/app/components/services/SectionDesign";
 import SectionMaintenence from "@/app/components/services/SectionMaintenence";
 import React from "react";
