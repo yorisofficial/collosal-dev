@@ -39,14 +39,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex w-full items-center justify-center">
       <nav
         ref={navbarRef}
         className={`${
           isScrolled
             ? "fixed -top-4 left-0 bg-black/80 backdrop-blur-md"
             : "block"
-        } z-50 w-full px-8 py-4 lg:px-44 xl:flex xl:items-center xl:justify-between`}
+        } z-50 w-full max-w-screen-2xl px-8 py-4 lg:px-44 xl:flex xl:items-center xl:justify-between`}
       >
         <div className="header mt-4 flex w-full justify-between gap-3 xl:w-fit">
           <Link
@@ -85,7 +85,7 @@ const Navbar = () => {
             </div>
           </div>
         )}
-        <div className="desktop-menus mt-4 hidden xl:block">
+        <div className="desktop-menus mt-4 hidden xl:block ">
           <ul className="flex gap-14">
             {NAV_LINKS.map((menu, index) => (
               <li

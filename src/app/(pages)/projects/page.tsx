@@ -1,4 +1,4 @@
-import Undercontruction from "@/app/components/Undercontruction";
+import Undercontruction from "@/app/components/services/Undercontruction";
 import React from "react";
 
 const page = () => {

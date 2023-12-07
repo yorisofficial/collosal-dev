@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-900 text-white;
+  background-color: rgba(11, 11, 34, 1);
+  color: white;
 }
 
 /* 

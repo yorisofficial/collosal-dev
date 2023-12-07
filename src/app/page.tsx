@@ -70,13 +70,13 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="absolute -z-10 h-full w-full opacity-10 blur-2xl filter xl:block">
+        <div className="absolute -z-10 h-full w-full opacity-10 blur-3xl filter xl:block">
           <div className="-translate-y-1/5 -left-1/5 -top-1/5 absolute z-10 h-32 w-32 rounded-full bg-yellow-500 xl:h-[700px] xl:w-[700px]"></div>
           <div className="absolute -top-1/4 right-0 z-0 h-32 w-32 -translate-x-1/2 rounded-full bg-teal-500 xl:h-[700px] xl:w-[700px]"></div>
           <div className="-top-1/5 absolute right-0 z-10 h-32 w-32 -translate-y-1/4 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
         </div>
       </div>
-      <div className="feature-card-section relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 px-4 md:grid-cols-3 md:px-16 xl:gap-8 xl:px-44">
+      <div className="feature-card-section relative grid h-full w-full max-w-screen-2xl grid-cols-1 items-center justify-center gap-4 px-4 md:grid-cols-3 md:px-16 xl:gap-8 xl:px-44">
         {cardItems.map((item, index) => (
           <div
             key={index}
@@ -108,7 +108,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center px-4 md:px-16 xl:grid-cols-2 xl:px-44">
+      <div className="how-work-section relative grid h-full w-full max-w-screen-2xl grid-cols-1 items-center justify-center px-4 md:px-16 xl:grid-cols-2 xl:px-44">
         <div className="header-content relative">
           <div className="z-10 flex h-full w-full items-center justify-center">
             <h1 className="text-3xl font-semibold text-white">
@@ -126,7 +126,7 @@ export default function Home() {
             <div className="absolute -top-1/4 left-8 z-0 h-80 w-80 -translate-y-1/2 rounded-full bg-teal-500"></div>
           </div>
         </div>
-        <div className="body-content flex flex-col items-center justify-center">
+        <div className="body-content flex flex-col items-center justify-center xl:items-start xl:justify-start">
           <p className="w-full text-center font-semibold text-[#16FCD2] xl:text-start">
             HOW WE WORK?
           </p>
@@ -141,7 +141,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="project-section flex h-full w-full flex-col gap-20 px-4 md:px-16 xl:px-44">
+      <div className="project-section flex h-full w-full max-w-screen-2xl flex-col gap-20 px-4 md:px-16 xl:px-44">
         <div className="header-content relative flex h-full w-full flex-col items-center justify-center">
           <p className="w-full text-center font-semibold text-[#16FCD2]">
             PROJECTS
@@ -194,60 +194,62 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pricing-section  flex h-full w-full flex-col items-center justify-center gap-16 rounded-xl bg-[#221048] px-4 py-8 md:px-16 xl:h-[900px] xl:gap-20 xl:px-8">
-        <div className="header-content w-ful flex flex-col items-center justify-center">
-          <p className="uppercase text-[#16FCD2]">GET STARTED</p>
-          <h1 className="w-full text-center text-4xl font-semibold xl:w-[500px]">
-            What do you need? Choose a service that can help you
-          </h1>
-        </div>
-        <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-full">
-          {pristList.map((item, index) => (
-            <div
-              key={item.id}
-              className={`card-item h-full w-full rounded-xl p-8 xl:min-w-[380px] ${
-                item.id === 1
-                  ? "bg-[#3F2379]"
-                  : item.id === 2
-                    ? "bg-[#233679]"
-                    : item.id === 3
-                      ? "bg-[#792366]"
-                      : null
-              }`}
-            >
-              <div className="header flex justify-between md:flex-col xl:flex-row">
-                <div className="right-side">
-                  <h1 className="text-xl font-semibold">{item.title}</h1>
-                </div>
-                <div className="left-side">
-                  <span>Starting from</span>
-                  <h1 className="text-xl font-semibold">{item.price}$</h1>
-                </div>
-              </div>
-              <hr className="my-8" />
-              <div className="service my-12">
-                {item.service.map((service, index) => (
-                  <div
-                    key={index}
-                    className="flex w-full flex-col items-center justify-center gap-4"
-                  >
-                    <p className="text-center">{service.list1}</p>
-                    <p className="text-center">{service.list2}</p>
-                    <p className="text-center">{service.list3}</p>
-                    <p className="text-center">{service.list4}</p>
+      <div className="pricing-section w-full max-w-screen-2xl px-6">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-8 rounded-xl bg-[#221048] p-8 xl:min-h-[911px]">
+          <div className="header-content w-ful flex flex-col items-center justify-center">
+            <p className="uppercase text-[#16FCD2]">GET STARTED</p>
+            <h1 className="w-full text-center text-4xl font-semibold xl:w-[500px]">
+              What do you need? Choose a service that can help you
+            </h1>
+          </div>
+          <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-full">
+            {pristList.map((item, index) => (
+              <div
+                key={item.id}
+                className={`card-item h-full w-full rounded-xl p-8 xl:min-w-[380px] ${
+                  item.id === 1
+                    ? "bg-[#3F2379]"
+                    : item.id === 2
+                      ? "bg-[#233679]"
+                      : item.id === 3
+                        ? "bg-[#792366]"
+                        : null
+                }`}
+              >
+                <div className="header flex justify-between md:flex-col xl:flex-row">
+                  <div className="right-side">
+                    <h1 className="text-xl font-semibold">{item.title}</h1>
                   </div>
-                ))}
+                  <div className="left-side">
+                    <span>Starting from</span>
+                    <h1 className="text-xl font-semibold">{item.price}$</h1>
+                  </div>
+                </div>
+                <hr className="my-8" />
+                <div className="service my-12">
+                  {item.service.map((service, index) => (
+                    <div
+                      key={index}
+                      className="flex w-full flex-col items-center justify-center gap-4"
+                    >
+                      <p className="text-center">{service.list1}</p>
+                      <p className="text-center">{service.list2}</p>
+                      <p className="text-center">{service.list3}</p>
+                      <p className="text-center">{service.list4}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="cta-button flex w-full items-center justify-center">
+                  <Button variant="primaryWhite" size="large">
+                    Detail
+                  </Button>
+                </div>
               </div>
-              <div className="cta-button flex w-full items-center justify-center">
-                <Button variant="primaryWhite" size="large">
-                  Detail
-                </Button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-      <div className="our-reviews-section relative h-full w-full px-4 md:px-16 xl:px-44">
+      <div className="our-reviews-section relative h-full w-full max-w-screen-2xl px-4 md:px-16 xl:px-44">
         <div className="absolute left-0 top-0 flex h-full w-full items-center justify-between opacity-10 blur-3xl filter">
           <div className="h-[500px] w-[700px] rounded-full bg-yellow-500"></div>
           <div className="h-[500px] w-[700px] rounded-full bg-teal-500"></div>
@@ -305,7 +307,7 @@ export default function Home() {
                     <h1 className="text-xl font-semibold">{item.name}</h1>
                     <p className="">{item.title}</p>
                   </div>
-                  <p className="text-center">{item.quotes}</p>
+                  <q className="text-center">{item.quotes}</q>
                 </div>
               </div>
             </SwiperSlide>
