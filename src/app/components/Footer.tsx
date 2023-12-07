@@ -1,12 +1,35 @@
 import Link from "next/link";
 import React from "react";
-import SendQuotes from "./SendQuotes";
+import Button from "./Button";
 
 const Footer = () => {
   return (
-    <div className="flex w-full flex-col gap-32 py-4">
-      <SendQuotes />
-      <div className="grid h-full w-full grid-cols-2 gap-6 px-4 text-white/50 md:grid-cols-3 xl:grid-cols-4 xl:gap-3 xl:px-44">
+    <div className="relative flex w-full flex-col gap-32 px-4 py-8 md:px-16 xl:px-44">
+      <div className="absolute left-0 top-0 -z-10 h-full w-full">
+        <div className="dot-acc blue absolute bottom-[4%] right-1/4 h-8 w-8 rotate-45 rounded-full bg-indigo-600 blur-md"></div>
+        <div className="dot-acc pink top1/2 absolute right-[10%] h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-md xl:top-8"></div>
+        <div className="dot-acc green absolute bottom-1/4 left-[10%] h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-md xl:bottom-8"></div>
+      </div>
+      <div className="content-quote flex w-full flex-col">
+        <div className="tems-center flex w-full flex-col justify-between xl:flex-row">
+          <h1 className="w-full text-center text-3xl font-bold xl:max-w-[589px] xl:text-start">
+            We have prepared everything, it is time for you to tell the problem
+          </h1>
+          <div className="mt-8 flex w-full items-center justify-center gap-2 xl:mt-0 xl:w-1/2">
+            <Link href="/quotes">
+              <Button variant="primary" size="large">
+                Send Quote
+              </Button>
+            </Link>
+            <Link href="/">
+              <Button variant="secondary" size="large">
+                Ask Us
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="grid h-full w-full grid-cols-2 gap-6 text-white/50 md:grid-cols-3 xl:grid-cols-4 xl:gap-3">
         <div className="content-footer brand-footer col-span-2 flex w-full flex-col items-start justify-start md:col-span-3 xl:col-span-1">
           <div className="flex gap-2">
             <svg
@@ -57,13 +80,22 @@ const Footer = () => {
             <h1 className="text-xl uppercase text-white">company</h1>
           </div>
           <div className="body-footer mt-4 flex flex-col items-start justify-center gap-2">
-            <Link href="" className="capitalize duration-500 hover:text-white">
+            <Link
+              href="/about"
+              className="capitalize duration-500 hover:text-white"
+            >
               about
             </Link>
-            <Link href="" className="capitalize duration-500 hover:text-white">
+            <Link
+              href="/contact"
+              className="capitalize duration-500 hover:text-white"
+            >
               contact
             </Link>
-            <Link href="" className="capitalize duration-500 hover:text-white">
+            <Link
+              href="/quotes"
+              className="capitalize duration-500 hover:text-white"
+            >
               Send Quote
             </Link>
             <Link href="" className="capitalize duration-500 hover:text-white">

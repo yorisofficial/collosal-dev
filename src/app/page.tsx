@@ -16,6 +16,8 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import ButtonSwiper from "./components/ButtonSwiper";
 import { useState } from "react";
 import Footer from "./components/Footer";
+import { USERS_REVIEW, IMAGES_SPONSORS } from "../../constants";
+import Link from "next/link";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -42,58 +44,11 @@ export default function Home() {
         "After the work is complete, we will send the project and all its assets to you.",
     },
   ];
-  const user = [
-    {
-      id: 0,
-      name: "Courtney Henry",
-      img: "/image/testimonial/Avatar1.png",
-      title: "Biffco Enterprises Ltd.",
-      quotes:
-        "Very easy to use. I made back the purchase price in just 48 hours! It's great. It's is both attractive and highly adaptable.",
-    },
-    {
-      id: 1,
-      name: "Esther Howard",
-      img: "/image/testimonial/Avatar2.png",
-      title: "Abstergo Ltd.",
-      quotes:
-        "Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business.",
-    },
-    {
-      id: 2,
-      name: "Ronald Richards",
-      img: "/image/testimonial/Avatar3.png",
-      title: "Barone LLC.",
-      quotes:
-        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
-    },
-    {
-      id: 3,
-      name: "Ronald Richards",
-      img: "/image/testimonial/Avatar3.png",
-      title: "Barone LLC.",
-      quotes:
-        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
-    },
-    {
-      id: 4,
-      name: "Ronald Richards",
-      img: "/image/testimonial/Avatar3.png",
-      title: "Barone LLC.",
-      quotes:
-        "I am really satisfied with it. I'm good to go. It really saves me time and effort. It's is exactly what our business has been lacking.",
-    },
-  ];
-  const imgSponsor = [
-    { tittle: "Facebook", src: "/image/brand-group/Facebook_Logo.svg" },
-    { tittle: "Github", src: "/image/brand-group/Github_Logo.svg" },
-    { tittle: "Forbes", src: "/image/brand-group/Forbes_Logo.svg" },
-    { tittle: "Google", src: "/image/brand-group/Google_Logo.svg" },
-    { tittle: "Microsoft", src: "/image/brand-group/Microsoft_Logo.svg" },
-  ];
+  const user = USERS_REVIEW;
+  const imgSponsor = IMAGES_SPONSORS;
   return (
-    <main className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-16 xl:gap-32">
-      <div className="hero-section relative flex h-screen w-full items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-16 py-4 xl:gap-32">
+      <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
@@ -107,9 +62,11 @@ export default function Home() {
             not reduce the quality of our work.
           </p>
           <div className="mt-10 flex gap-6">
-            <Button variant="primary" size="large">
-              Send Quote
-            </Button>
+            <Link href="/quotes">
+              <Button variant="primary" size="large">
+                Send Quote
+              </Button>
+            </Link>
             <Button variant="secondary" size="large">
               Learn More
             </Button>
@@ -121,7 +78,7 @@ export default function Home() {
           <div className="-top-1/5 absolute right-0 z-10 h-32 w-32 -translate-y-1/4 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
         </div>
       </div>
-      <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 md:grid-cols-3 xl:gap-8 xl:px-44">
+      <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 md:grid-cols-3 xl:gap-8">
         {cardItems.map((item, index) => (
           <div
             key={index}
@@ -139,7 +96,7 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="logo-group relative flex h-full w-full items-center justify-center gap-8 xl:px-44">
+      <div className="logo-group relative flex h-full w-full items-center justify-center gap-8">
         <div className=" flex w-full flex-wrap items-center justify-center gap-8">
           {imgSponsor.map((item, index) => (
             <Image
@@ -153,7 +110,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center xl:grid-cols-2 xl:px-44">
+      <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center xl:grid-cols-2">
         <div className="header-content relative">
           <div className="z-10 flex h-full w-full items-center justify-center">
             <h1 className="text-3xl font-semibold text-white">
@@ -186,7 +143,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="project-section flex h-full w-full flex-col gap-20 xl:px-44">
+      <div className="project-section flex h-full w-full flex-col gap-20">
         <div className="header-content relative flex h-full w-full flex-col items-center justify-center">
           <p className="w-full text-center font-semibold text-[#16FCD2]">
             PROJECTS
@@ -292,7 +249,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="our-reviews relative h-full w-full px-4 xl:px-44">
+      <div className="our-reviews relative h-full w-full">
         <div className="absolute left-0 top-0 flex h-full w-full items-center justify-between opacity-10 blur-3xl filter">
           <div className="h-[500px] w-[700px] rounded-full bg-yellow-500"></div>
           <div className="h-[500px] w-[700px] rounded-full bg-teal-500"></div>
@@ -327,7 +284,7 @@ export default function Home() {
           {user.map((item) => (
             <SwiperSlide key={item.id} className="py-12">
               <div
-                className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md bg-white/10 bg-opacity-40 px-4 backdrop-blur-md ${
+                className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md bg-white/10 bg-opacity-40 backdrop-blur-md ${
                   activeSlide === item.id
                     ? "xl:-translate-y-6 xl:scale-100"
                     : "xl:translate-y-4 xl:scale-90"
@@ -357,14 +314,6 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      <div className="relative h-full w-full">
-        <div className="absolute -z-10 h-full w-full">
-          <div className="dot-acc absolute bottom-0 right-0 h-8 w-8 rotate-45 rounded-full bg-indigo-600 blur-md"></div>
-          <div className="dot-acc absolute top-0 h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-md xl:right-16"></div>
-          <div className="dot-acc absolute h-16 w-16 rotate-45 rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-md xl:bottom-32 xl:left-16"></div>
-        </div>
-        <Footer />
-      </div>
-    </main>
+    </div>
   );
 }

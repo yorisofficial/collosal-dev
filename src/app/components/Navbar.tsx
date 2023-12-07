@@ -4,13 +4,22 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import Button from "./Button";
 import { usePathname } from "next/navigation";
+import { NAV_LINKS } from "../../../constants";
 
 const Navbar = () => {
   const PathName = usePathname();
   const navbarRef = useRef(null);
-  const [mobileMenu, setMobileMenu] = React.useState(false);
+  const [mobileMenu, setMobileMenu] = React.useState(true);
   const [isScrolled, setIsScrolled] = React.useState(false);
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         navbarRef.current &&
@@ -19,27 +28,27 @@ const Navbar = () => {
         setMobileMenu(false);
       }
     };
+    document.addEventListener("scroll", handleScroll);
 
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
+      document.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  const menus = [
-    { title: "Home", url: "/" },
-    { title: "Services", url: "/service" },
-    { title: "How We Work", url: "/work" },
-    { title: "Projects", url: "/projects" },
-    { title: "About", url: "/about" },
-  ];
+
   return (
     <div>
       <nav
         ref={navbarRef}
-        className="fixed left-0 top-0 z-50 w-full bg-white/10 px-4 py-4 backdrop-blur-xl xl:flex xl:items-center xl:justify-between xl:px-44"
+        className={`${
+          isScrolled
+            ? "fixed -top-4 left-0 bg-black/80 backdrop-blur-md"
+            : "block"
+        } z-50 w-full px-8 py-4 lg:px-44 xl:flex xl:items-center xl:justify-between`}
       >
-        <div className="header flex w-full justify-between gap-3 xl:w-fit">
+        <div className="header mt-4 flex w-full justify-between gap-3 xl:w-fit">
           <Link
             href={"/"}
             className="flex items-center gap-2 text-xl font-bold xl:text-3xl"
@@ -59,9 +68,9 @@ const Navbar = () => {
           </div>
         </div>
         {mobileMenu && (
-          <div className="mobile-menus mt-8 text-center xl:hidden">
+          <div className="mobile-menus absolute left-1/2 top-20 z-40 mt-8 w-[90%] -translate-x-1/2 rounded-md border-2 border-white/40 bg-black px-4 py-6 text-center md:px-12 xl:hidden">
             <div className="flex flex-col gap-8">
-              {menus.map((menu, index) => (
+              {NAV_LINKS.map((menu, index) => (
                 <Link
                   href={menu.url}
                   onClick={() => setMobileMenu(false)}
@@ -78,8 +87,13 @@ const Navbar = () => {
         )}
         <div className="desktop-menus hidden xl:block">
           <ul className="flex gap-14">
-            {menus.map((menu, index) => (
-              <li key={index}>
+            {NAV_LINKS.map((menu, index) => (
+              <li
+                key={index}
+                className={`duration-500 hover:scale-110 ${
+                  PathName === menu.url ? "scale-110 font-bold" : ""
+                }`}
+              >
                 <Link href={menu.url}>{menu.title}</Link>
               </li>
             ))}
