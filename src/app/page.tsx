@@ -41,12 +41,12 @@ export default function Home() {
         "After the work is complete, we will send the project and all its assets to you.",
     },
   ];
-  const user = USERS_REVIEW;
+  const users = USERS_REVIEW;
   const imgSponsor = IMAGES_SPONSORS;
   const pristList = PRICELIST;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-16 py-4 xl:gap-32">
-      <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center">
+      <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center px-4 md:px-16 xl:px-44">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="-top-1/5 absolute right-0 z-10 h-32 w-32 -translate-y-1/4 rounded-full bg-pink-600 xl:h-[700px] xl:w-[700px]"></div>
         </div>
       </div>
-      <div className="feature-card relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 md:grid-cols-3 xl:gap-8">
+      <div className="feature-card-section relative grid h-full w-full grid-cols-1 items-center justify-center gap-4 px-4 md:grid-cols-3 md:px-16 xl:gap-8 xl:px-44">
         {cardItems.map((item, index) => (
           <div
             key={index}
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="logo-group relative flex h-full w-full items-center justify-center gap-8">
+      <div className="logo-group-section relative flex h-full w-full items-center justify-center gap-8 px-4 md:px-16 xl:px-44">
         <div className=" flex w-full flex-wrap items-center justify-center gap-8">
           {imgSponsor.map((item, index) => (
             <Image
@@ -108,7 +108,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center xl:grid-cols-2">
+      <div className="how-work-section relative grid h-full w-full grid-cols-1 items-center justify-center px-4 md:px-16 xl:grid-cols-2 xl:px-44">
         <div className="header-content relative">
           <div className="z-10 flex h-full w-full items-center justify-center">
             <h1 className="text-3xl font-semibold text-white">
@@ -141,7 +141,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="project-section flex h-full w-full flex-col gap-20">
+      <div className="project-section flex h-full w-full flex-col gap-20 px-4 md:px-16 xl:px-44">
         <div className="header-content relative flex h-full w-full flex-col items-center justify-center">
           <p className="w-full text-center font-semibold text-[#16FCD2]">
             PROJECTS
@@ -194,14 +194,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="pricing-section flex h-full w-full flex-col items-center justify-center gap-16 rounded-xl bg-[#221048] px-3 py-8 xl:h-[900px] xl:gap-20 xl:px-8">
+      <div className="pricing-section  flex h-full w-full flex-col items-center justify-center gap-16 rounded-xl bg-[#221048] px-4 py-8 md:px-16 xl:h-[900px] xl:gap-20 xl:px-8">
         <div className="header-content w-ful flex flex-col items-center justify-center">
           <p className="uppercase text-[#16FCD2]">GET STARTED</p>
           <h1 className="w-full text-center text-4xl font-semibold xl:w-[500px]">
             What do you need? Choose a service that can help you
           </h1>
         </div>
-        <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-fit">
+        <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-full">
           {pristList.map((item, index) => (
             <div
               key={item.id}
@@ -247,7 +247,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="our-reviews relative h-full w-full">
+      <div className="our-reviews-section relative h-full w-full px-4 md:px-16 xl:px-44">
         <div className="absolute left-0 top-0 flex h-full w-full items-center justify-between opacity-10 blur-3xl filter">
           <div className="h-[500px] w-[700px] rounded-full bg-yellow-500"></div>
           <div className="h-[500px] w-[700px] rounded-full bg-teal-500"></div>
@@ -279,7 +279,7 @@ export default function Home() {
         >
           <ButtonSwiper />
 
-          {user.map((item) => (
+          {users.map((item) => (
             <SwiperSlide key={item.id} className="py-12">
               <div
                 className={`flex h-[450px] w-full flex-col items-center justify-center gap-4 rounded-md bg-white/10 bg-opacity-40 backdrop-blur-md ${
@@ -300,7 +300,7 @@ export default function Home() {
                     <IconQuotes size={20} />
                   </div>
                 </div>
-                <div className="flex w-full flex-col items-center justify-center gap-8">
+                <div className="flex w-full flex-col items-center justify-center gap-8 px-2">
                   <div className="w-full text-center">
                     <h1 className="text-xl font-semibold">{item.name}</h1>
                     <p className="">{item.title}</p>

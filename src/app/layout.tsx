@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <Navbar />
-        <main className="px-4 md:px-16 xl:px-44">{children}</main>
+        <main className="">{children}</main>
         <Footer />
       </body>
     </html>

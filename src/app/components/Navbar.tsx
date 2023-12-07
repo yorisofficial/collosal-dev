@@ -99,7 +99,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="cta-button hidden xl:block">
+        <div className="cta-button mt-4 hidden xl:block">
           <Button variant="secondary" size="large">
             Contact
           </Button>
