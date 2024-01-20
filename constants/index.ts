@@ -116,3 +116,33 @@ export const PRICELIST = [
         ]
     }
 ]
+
+export const HOWWEWORK = [
+    {
+        "title": "Let's talk about your company's problems problems first",
+        "desk1": "After submitting the quote form, we will review the data, then we will contact you. You can discuss with our team regarding your problem and find a solution to that problem.",
+        "desk2": "In this step, you will discuss what application to build.",
+        "step": "STEP 01",
+        "image": "/image/how-work/discuss_illustration.png",
+        "imageAlt": "1",
+        "class": ""
+    },
+    {
+        "title": "Doing planning, design and development until everything is finished",
+        "desk1": "When everything is agreed upon, our team will make plans related to the application that will be created. Starting from analysis, design, to development.",
+        "desk2": "In this step, the application is 100% complete.",
+        "step": "STEP 02",
+        "image": "/image/how-work/development_illustration.svg",
+        "imageAlt": "2",
+        "class": "order-first"
+    },
+    {
+        "title": "The project is complete and we ship all the project assets, and access to the server",
+        "desk1": "We will be responsible for delivering all the project assets to you, don't worry. These assets include, design files, source code, server access, and so on.",
+        "desk2": "In this step, everything is done and the contract ends.",
+        "step": "STEP 03",
+        "image": "/image/how-work/projects_illustration.svg",
+        "imageAlt": "3",
+        "class": ""
+    }
+]
