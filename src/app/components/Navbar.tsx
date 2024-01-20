@@ -39,16 +39,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex w-full items-center justify-center">
+    <>
       <nav
         ref={navbarRef}
         className={`${
-          isScrolled
-            ? "fixed -top-4 left-0 bg-black/80 backdrop-blur-md"
-            : "block"
-        } z-50 w-full max-w-screen-2xl px-8 py-4 lg:px-44 xl:flex xl:items-center xl:justify-between`}
+          isScrolled ? "backdrop-blur-md" : ""
+        } max-w-screen-3xl fixed left-0 top-0 z-50 w-full bg-[#0b0b22]/80 px-8 py-4 lg:px-44 xl:flex xl:items-center xl:justify-between`}
       >
-        <div className="header mt-4 flex w-full justify-between gap-3 xl:w-fit">
+        <div className="header flex w-full justify-between gap-3 xl:w-fit">
           <Link
             href={"/"}
             className="flex items-center gap-2 text-xl font-bold xl:text-3xl"
@@ -59,7 +57,7 @@ const Navbar = () => {
           <div className="flex text-white xl:hidden">
             <Button
               onClick={() => setMobileMenu(!mobileMenu)}
-              variant="secondary"
+              variant="primary"
               size="small"
               ariaLabel="Open Menu"
             >
@@ -68,7 +66,7 @@ const Navbar = () => {
           </div>
         </div>
         {mobileMenu && (
-          <div className="mobile-menus absolute left-1/2 top-20 z-40 mt-8 w-[90%] -translate-x-1/2 rounded-md border-2 border-white/40 bg-black px-4 py-6 text-center md:px-12 xl:hidden">
+          <div className="mobile-menus absolute left-1/2 top-20 z-40 mt-8 w-[90%] -translate-x-1/2 rounded-md border-2 border-white/40 bg-[#0b0b22] px-4 py-6 text-center md:px-12 xl:hidden">
             <div className="flex flex-col gap-8">
               {NAV_LINKS.map((menu, index) => (
                 <Link
@@ -107,7 +105,7 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="relative grid gap-8 p-[5%] xl:grid-cols-2 xl:px-44">
+      <div className="relative mt-24 grid gap-8 p-[5%] xl:mt-32 xl:grid-cols-2 xl:px-44">
         <div className="absolute right-32 top-32 -z-20 h-48 w-48 -translate-y-1/2 rounded-full bg-[#FC165B]/20 blur-3xl xl:h-[700px] xl:w-[700px]"></div>
         <div className="absolute -left-40 top-1/2 -z-20 h-48 w-48 -translate-y-1/2 rounded-full bg-[#FCA016]/20 blur-3xl xl:h-[700px] xl:w-[700px]"></div>
         <div className="absolute left-1/2 top-1/2 -z-30 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#16FCD2]/20 blur-3xl xl:h-[500px] xl:w-[500px]"></div>

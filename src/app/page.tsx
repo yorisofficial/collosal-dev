@@ -46,7 +46,7 @@ export default function Home() {
   const pristList = PRICELIST;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-16 py-4 xl:gap-32">
-      <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center px-4 md:px-16 xl:px-44">
+      <div className="hero-section relative mt-24 flex h-full w-full items-center justify-center px-4 md:px-16 xl:mt-32 xl:px-44">
         <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-4">
           <span className="font-semibold text-[#16FCD2]">
             CLIENT-DEVELOPMENT DRIVEN
