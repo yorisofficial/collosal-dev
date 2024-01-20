@@ -14,16 +14,18 @@ type Props = {
 const PerStep = (props: Props) => {
   return (
     <>
-      <div className="step__1 mt-16 flex flex-col items-center justify-center gap-8 xl:flex-row xl:items-start xl:gap-16">
+      <div className="step__1 grid grid-cols-1 items-center justify-center gap-8 xl:grid-cols-2 xl:items-start">
         <Image
           src={props.image}
           alt={`Illustration step ${props.imageAlt}`}
           height={500}
           width={500}
-          className="h-3/4 w-3/4 xl:h-fit xl:w-fit"
+          className=""
         />
         <div
-          className={`description ${props.class} flex flex-col gap-8 text-center xl:text-start`}
+          className={`description ${
+            props.class !== "" ? "xl:order-first" : ""
+          } flex flex-col gap-8 py-8 text-center xl:py-0 xl:text-start`}
         >
           <div className="title-step">
             <span className="font-bold uppercase text-teal-500">

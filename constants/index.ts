@@ -134,7 +134,7 @@ export const HOWWEWORK = [
         "step": "STEP 02",
         "image": "/image/how-work/development_illustration.svg",
         "imageAlt": "2",
-        "class": "order-first"
+        "class": "order-last xl:order-first"
     },
     {
         "title": "The project is complete and we ship all the project assets, and access to the server",

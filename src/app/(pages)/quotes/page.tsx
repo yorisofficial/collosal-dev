@@ -4,7 +4,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="relative mt-8 grid h-full w-full grid-cols-1 gap-16 xl:mt-0 xl:grid-cols-2">
+      <div className="relative mt-8 grid h-full w-full grid-cols-1 gap-16 xl:mt-0 xl:grid-cols-2 xl:px-44">
         <div className="absolute -z-10 h-full w-full opacity-10 blur-2xl filter xl:block">
           <div className="-translate-y-1/5 -left-1/5 -top-1/5 absolute z-10 h-[120px] w-[120px] rounded-full bg-yellow-500 xl:h-[240px] xl:w-[240px]"></div>
           <div className="absolute -top-1/4 right-0 z-0 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-teal-500 xl:h-[700px] xl:w-[700px]"></div>
@@ -97,9 +97,9 @@ const page = () => {
                   name=""
                   id=""
                   cols={30}
-                  rows={10}
+                  rows={4}
                   required
-                  placeholder="input your problem"
+                  placeholder="let's solve your problem"
                   className="w-full rounded-md border border-white/30 bg-transparent p-2"
                 ></textarea>
               </div>

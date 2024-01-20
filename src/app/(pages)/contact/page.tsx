@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="relative grid gap-8 p-[5%] xl:grid-cols-2 xl:px-32">
+      <div className="relative grid gap-8 p-[5%] xl:grid-cols-2 xl:px-44">
         <div className="absolute right-32 top-32 -z-20 h-48 w-48 -translate-y-1/2 rounded-full bg-[#FC165B]/20 blur-3xl xl:h-[700px] xl:w-[700px]"></div>
         <div className="absolute -left-40 top-1/2 -z-20 h-48 w-48 -translate-y-1/2 rounded-full bg-[#FCA016]/20 blur-3xl xl:h-[700px] xl:w-[700px]"></div>
         <div className="absolute left-1/2 top-1/2 -z-30 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#16FCD2]/20 blur-3xl xl:h-[500px] xl:w-[500px]"></div>
@@ -18,7 +18,7 @@ const page = () => {
               We love receiving messages from you, we are waiting for it.
             </h1>
           </div>
-          <div className="cta-group flex flex-col items-start justify-center gap-6 md:flex-row">
+          <div className="cta-group flex flex-col items-start justify-center gap-6 md:flex-row xl:flex-col">
             <div className="cta-item-1 flex items-center justify-center gap-7">
               <div className="flex h-20 w-20 items-center justify-center bg-white/20">
                 <IconPhoneCall size={40} />
@@ -84,11 +84,8 @@ const page = () => {
               <div className="col-span-2 flex flex-col gap-1.5">
                 <label htmlFor="message">Tell Us Your Problem</label>
                 <textarea
-                  name=""
-                  id=""
-                  cols={30}
-                  rows={10}
                   required
+                  rows={4}
                   placeholder="input your problem"
                   className="w-full rounded-md border border-white/30 bg-transparent p-2"
                 ></textarea>
