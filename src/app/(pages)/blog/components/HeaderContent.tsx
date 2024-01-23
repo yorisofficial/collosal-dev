@@ -7,8 +7,8 @@ const HeaderContent = () => {
         <div className="section-design flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-8 md:px-16 md:py-12 xl:gap-32 xl:px-44">
           <div className="header-content flex h-full w-full flex-col items-center justify-center">
             <div className="flex w-full flex-col items-center justify-center text-center">
-              <h1 className="uppercase text-[#16FCD2]">BLOG</h1>
-              <h1 className="w-3/4 max-w-[420px] font-bold md:w-1/2 xl:w-full xl:text-3xl">
+              <span className="font-bold uppercase text-teal-500">BLOG</span>
+              <h1 className="h-fit text-4xl font-bold xl:w-[500px]">
                 Get precise knowledge wherever you are
               </h1>
             </div>

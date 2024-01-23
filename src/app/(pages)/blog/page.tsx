@@ -21,7 +21,7 @@ export default function Page() {
   });
 
   return (
-    <div className="container mx-auto h-full max-w-6xl py-32">
+    <div className="container mx-auto h-full max-w-6xl px-[5%] py-32">
       <HeaderContent />
       <BlogList />
     </div>

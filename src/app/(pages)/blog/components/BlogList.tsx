@@ -17,13 +17,13 @@ const BlogList = () => {
     };
   });
   return (
-    <div className="other-content w-full space-y-8">
-      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+    <div className="other-content w-full space-y-12 xl:space-y-8">
+      <div className="grid gap-16 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
         {blogs.map((blog) => (
           <Link
             href={`/blog/${blog.slug}`}
             key={blog.slug}
-            className="card-items space-y-12"
+            className="card-items space-y-4"
           >
             <div className="">
               <Image
