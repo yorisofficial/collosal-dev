@@ -36,7 +36,7 @@ export default function Page({ params }: any) {
   const props = getPost({ slug: params.slug });
 
   return (
-    <div className="w-full pb-32 xl:px-44">
+    <div className="w-full px-[5%] pb-32 xl:px-44">
       <BackButton />
       <div className="mx-auto max-w-5xl space-y-8 px-[5%] py-16">
         <article className="article__class">

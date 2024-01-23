@@ -17,6 +17,7 @@ import {
 } from "@tabler/icons-react";
 import PhoneMock from "./components/mockup/PhoneMock";
 import DesktopMock from "./components/mockup/DesktopMock";
+import CardPricing from "./components/main/CardPricing";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -170,49 +171,21 @@ export default function Home() {
               What do you need? Choose a service that can help you
             </h1>
           </div>
-          <div className="body-content grid w-full grid-cols-1 gap-4 md:grid-cols-3 xl:w-full">
-            {pristList.map((item, index) => (
-              <div
+          <div className="grid h-full w-full grid-cols-1 gap-4 xl:grid-cols-3">
+            {pristList.map((item) => (
+              <CardPricing
                 key={item.id}
-                className={`card-item h-full w-full rounded-xl p-8 xl:h-[480px] xl:min-w-[380px] ${
+                items={{ ...item }}
+                className={
                   item.id === 1
                     ? "bg-[#3F2379]"
                     : item.id === 2
                       ? "bg-[#233679]"
                       : item.id === 3
                         ? "bg-[#792366]"
-                        : null
-                }`}
-              >
-                <div className="header flex justify-between md:flex-col xl:flex-row">
-                  <div className="right-side">
-                    <h1 className="text-xl font-semibold">{item.title}</h1>
-                  </div>
-                  <div className="left-side">
-                    <span>Starting from</span>
-                    <h1 className="text-xl font-semibold">{item.price}$</h1>
-                  </div>
-                </div>
-                <hr className="my-8" />
-                <div className="service my-12">
-                  {item.service.map((service, index) => (
-                    <div
-                      key={index}
-                      className="flex w-full flex-col items-center justify-center gap-4"
-                    >
-                      <p className="text-center">{service.list1}</p>
-                      <p className="text-center">{service.list2}</p>
-                      <p className="text-center">{service.list3}</p>
-                      <p className="text-center">{service.list4}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="cta-button flex w-full items-center justify-center">
-                  <Button variant="primaryWhite" size="large">
-                    Detail
-                  </Button>
-                </div>
-              </div>
+                        : ""
+                }
+              />
             ))}
           </div>
         </div>

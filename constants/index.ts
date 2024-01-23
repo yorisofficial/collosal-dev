@@ -146,3 +146,63 @@ export const HOWWEWORK = [
         "class": ""
     }
 ]
+
+export const LISTSERVICE = [
+    {
+        "img": "/image/img-service/figma.svg",
+        "title": "Design Files",
+        "description": "Projects are well designed using Figma. You will get the design file.",
+    },
+    {
+        "img": "/image/img-service/clock.svg",
+        "title": "Same Day",
+        "description": "We don't want you to wait long. Everything will be finished on the same day.",
+    },
+    {
+        "img": "/image/img-service/code.svg",
+        "title": "Quality Code",
+        "description": "Code written according to good practice is highly maintainable.",
+    },
+    {
+        "img": "/image/img-service/layout.svg",
+        "title": "Responsive Design",
+        "description": "Access the website on any device, don't limit your visitors.",
+    },
+    {
+        "img": "/image/img-service/trending-up.svg",
+        "title": "SEO",
+        "description": "The website will appear on the first page of the search engine.",
+    },
+    {
+        "img": "/image/img-service/zap.svg",
+        "title": "Blazing Fast",
+        "description": "A high speed website will not disappoint prospective customers.",
+    },
+]
+
+export const FAQSERVICE = [
+    {
+        "title": "How is the payment system?",
+        "description": "If the project has agreed, you will pay an advance, and when the progress reaches 50% you will make a second payment, and when the progress is 100% you will pay it off."
+    },
+    {
+        "title": "What if the project stops halfway?",
+        "description": "We promise to always finish the project on time, if a problem occurs (because of our mistake), all payments will be refunded. And the project will be terminated."
+    },
+    {
+        "title": "Will I get the source code?",
+        "description": "When the project is 100% complete, all the resources, such as design files, analysis diagrams, source code, etc. will be provided to you. You don't need to worry about this."
+    },
+    {
+        "title": "Can I consult first?",
+        "description": "Of course you can consult us first. We are very happy to help your problems and provide our best solutions. You can contact us via the contact page."
+    },
+    {
+        "title": "Does it include servers and domains?",
+        "description": "You don't need to think about anything else, we have everything prepared. You just need to check your progress and make sure the features you want are the right one."
+    },
+    {
+        "title": "Is there a warranty?",
+        "description": "1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty."
+    },
+]

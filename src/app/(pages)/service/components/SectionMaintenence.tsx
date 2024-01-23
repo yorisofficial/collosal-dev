@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import DetailsNavigation from "./DetailsNavigation";
 
 const SectionMaintenence = () => {
   return (
@@ -84,11 +85,7 @@ const SectionMaintenence = () => {
                   </div>
                   <span>Fixing error</span>
                 </div>
-                <div className="col-span-2 flex items-center justify-end">
-                  <Link href="/service" className="flex gap-4">
-                    Service Detail <IconArrowRight />
-                  </Link>
-                </div>
+                <DetailsNavigation />
               </div>
             </div>
           </div>

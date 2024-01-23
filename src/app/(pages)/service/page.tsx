@@ -1,6 +1,6 @@
-import SectionDev from "@/app/components/services/SectionDev";
-import SectionDesign from "@/app/components/services/SectionDesign";
-import SectionMaintenence from "@/app/components/services/SectionMaintenence";
+import SectionDev from "@/app/(pages)/service/components/SectionDev";
+import SectionDesign from "@/app/(pages)/service/components/SectionDesign";
+import SectionMaintenence from "@/app/(pages)/service/components/SectionMaintenence";
 import React from "react";
 
 const page = () => {

@@ -2,10 +2,11 @@ import { IconArrowRight, IconLayout2, IconPointer } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import DetailsNavigation from "./DetailsNavigation";
 
 const SectionDesign = () => {
   return (
-    <div>
+    <>
       <div className="section-design flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-8 md:px-16 md:py-12 xl:gap-32 xl:px-44">
         <div className="header-content flex h-full w-full flex-col items-center justify-center">
           <div className="flex w-full flex-col items-center justify-center text-center">
@@ -70,18 +71,11 @@ const SectionDesign = () => {
                 <p>Create a modern design for your idea.</p>
               </div>
             </div>
-            <div className="flex w-full items-center justify-end">
-              <Link
-                href="/service"
-                className="flex items-center gap-2 duration-500"
-              >
-                Service Detail <IconArrowRight size={32} />
-              </Link>
-            </div>
+            <DetailsNavigation />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
