@@ -6,6 +6,11 @@ body {
   background-color: rgb(11, 11, 34);
   color: white;
 }
+.article__class {
+  @apply prose prose-zinc mx-auto flex flex-col items-center justify-center text-white prose-h1:text-center prose-h1:text-3xl prose-h1:font-bold prose-h1:text-white prose-h2:text-center prose-h2:font-bold prose-h2:text-teal-400
+  prose-h3:text-center prose-h3:font-normal prose-h3:text-white prose-p:py-8 prose-blockquote:text-center prose-blockquote:font-semibold
+ prose-blockquote:text-white prose-ul:list-disc prose-ul:indent-6 prose-img:rounded-3xl;
+}
 
 /* 
 :root {

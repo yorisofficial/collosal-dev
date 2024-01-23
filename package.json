@@ -1,6 +1,6 @@
 {
   "name": "collosal-dev",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,12 +11,15 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@tabler/icons-react": "^2.42.0",
+    "gray-matter": "^4.0.3",
     "next": "14.0.3",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
