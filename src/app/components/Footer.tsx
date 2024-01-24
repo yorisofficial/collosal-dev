@@ -53,31 +53,31 @@ const Footer = () => {
             </div>
             <div className="body-footer mt-4 flex flex-col items-start justify-center gap-2">
               <Link
-                href=""
+                href="/service"
                 className="capitalize duration-500 hover:text-white"
               >
                 Web Development
               </Link>
               <Link
-                href=""
+                href="/service"
                 className="capitalize duration-500 hover:text-white"
               >
                 App Development
               </Link>
               <Link
-                href=""
+                href="/service"
                 className="capitalize duration-500 hover:text-white"
               >
                 UI Design
               </Link>
               <Link
-                href=""
+                href="/service"
                 className="capitalize duration-500 hover:text-white"
               >
                 Consultation
               </Link>
               <Link
-                href=""
+                href="/service"
                 className="capitalize duration-500 hover:text-white"
               >
                 Maintenance
