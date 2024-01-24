@@ -61,18 +61,23 @@ const page = () => {
 
         <hr className="w-3/4 text-white opacity-20" />
         <div className="body-content relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <div className="object-tinker absolute right-1/4 top-8 h-[550px] w-[550px] -translate-x-1/2 rounded-full bg-pink-600/20 blur-3xl"></div>
-          <div className="object-tinker absolute -top-16 left-1/2 h-[550px] w-[550px] -translate-x-1/4 rounded-full bg-indigo-600/20 blur-3xl"></div>
+          <div className="object-tinker absolute left-0 top-0 h-60 w-60 rounded-full bg-pink-600/20 blur-3xl xl:right-1/4 xl:top-8 xl:h-[550px] xl:w-[550px] xl:-translate-x-1/2"></div>
+          <div className="object-tinker absolute right-0 top-1/2 h-60 w-60 -translate-y-1/2 rounded-full bg-indigo-600/20 blur-3xl xl:-top-16 xl:left-1/2 xl:h-[550px] xl:w-[550px] xl:-translate-x-1/4"></div>
           {cardDetail.map((item, index) => (
             <DetailCard key={index} content={{ ...item }} />
           ))}
         </div>
       </div>
       <div className="flex h-full w-full flex-col items-center justify-center gap-16 px-4 py-12 md:px-16 xl:gap-16 xl:px-44 xl:py-16">
-        <Header
-          title="FAQ"
-          description="Frequently asked questions, maybe the same as yours"
-        />
+        <div className="relative w-full">
+          <div className="dot-acc absolute left-0 top-0 h-8 w-8 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-pink-400 to-red-700 blur-sm duration-500 md:h-16 md:w-16 xl:top-0"></div>
+          <div className="dot-acc absolute bottom-2/3 right-8 h-8 w-8 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-green-300 to-green-600 blur-sm duration-500 md:h-16 md:w-16 xl:-top-16 xl:right-1/4 xl:translate-x-32"></div>
+          <div className="dot-acc absolute bottom-0 right-0 h-6 w-6 rotate-45 animate-pulse rounded-full bg-gradient-to-r from-indigo-300 to-indigo-600 blur-sm duration-500 xl:-bottom-3 xl:-right-3"></div>
+          <Header
+            title="FAQ"
+            description="Frequently asked questions, maybe the same as yours"
+          />
+        </div>
         <hr className="w-3/4 text-white opacity-20" />
         <div className="body-content grid xl:grid-cols-2 xl:gap-8">
           {faqDetail.map((item, index) => (

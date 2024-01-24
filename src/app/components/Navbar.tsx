@@ -74,7 +74,9 @@ const Navbar = () => {
                   onClick={() => setMobileMenu(false)}
                   key={index}
                   className={`rounded-md py-4 font-semibold duration-500 hover:bg-white hover:text-black ${
-                    PathName === menu.url ? "bg-white text-black" : ""
+                    PathName === menu.url || PathName.includes(`${menu.url}/`)
+                      ? "bg-white text-black"
+                      : ""
                   }`}
                 >
                   {menu.title}
@@ -89,7 +91,9 @@ const Navbar = () => {
               <li
                 key={index}
                 className={`duration-500 hover:scale-110 ${
-                  PathName === menu.url ? "scale-110 font-bold" : ""
+                  PathName === menu.url || PathName.includes(`${menu.url}/`)
+                    ? "scale-125 font-bold"
+                    : ""
                 }`}
               >
                 <Link href={menu.url}>{menu.title}</Link>

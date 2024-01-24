@@ -28,7 +28,7 @@ const page = () => {
             Ask Us
           </Button>
         </div>
-        <div className="form-content mt-0 flex h-full w-full items-start justify-center xl:mt-32 xl:items-center xl:justify-center">
+        <div className="form-content mt-0 flex h-full w-full items-start justify-center px-[5%] xl:mt-32 xl:items-center xl:justify-center xl:px-0">
           <div className="h-fit w-full rounded-md bg-white/10 p-6 backdrop-blur-md xl:p-9">
             <form
               action=""
