@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "./components/Header";
 import Image from "next/image";
-import DetailCard from "../components/DetailCard";
+import DetailCard from "./components/DetailCard";
 import { LISTSERVICE } from "../../../../../constants";
 import { FAQSERVICE } from "../../../../../constants";
-import FaqCard from "../components/FaqCard";
+import FaqCard from "./components/FaqCard";
 import Link from "next/link";
 
 const page = () => {
@@ -18,7 +18,7 @@ const page = () => {
           description="Solve your company's repetitive problems by designing apps"
         />
         <hr className="w-3/4 text-white opacity-20" />
-        <div className="body-content">
+        <div className="body-content container flex items-center justify-center md:pl-32 xl:pl-0">
           <div className="grid w-full gap-8 xl:grid-cols-2">
             <div className="">
               <Image
@@ -26,7 +26,7 @@ const page = () => {
                 height={500}
                 width={500}
                 alt="devlopment ilustration"
-                className="h-[400px] w-full"
+                className="h-[400px] w-[400px]"
               />
             </div>
             <div className="space-y-16">
@@ -61,8 +61,8 @@ const page = () => {
 
         <hr className="w-3/4 text-white opacity-20" />
         <div className="body-content relative grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <div className="object-tinker absolute left-0 top-0 h-60 w-60 rounded-full bg-pink-600/20 blur-3xl xl:right-1/4 xl:top-8 xl:h-[550px] xl:w-[550px] xl:-translate-x-1/2"></div>
-          <div className="object-tinker absolute right-0 top-1/2 h-60 w-60 -translate-y-1/2 rounded-full bg-indigo-600/20 blur-3xl xl:-top-16 xl:left-1/2 xl:h-[550px] xl:w-[550px] xl:-translate-x-1/4"></div>
+          <div className="object-tinker absolute left-0 top-0 -z-10 h-60 w-60 rounded-full bg-pink-600/20 blur-3xl xl:right-1/2 xl:top-8 xl:h-[450px] xl:w-[450px]"></div>
+          <div className="object-tinker absolute right-0 top-1/2 -z-10 h-60 w-60 -translate-y-1/2 rounded-full bg-indigo-600/20 blur-3xl xl:left-1/2 xl:top-1/4 xl:h-[450px] xl:w-[450px] xl:-translate-x-1/4"></div>
           {cardDetail.map((item, index) => (
             <DetailCard key={index} content={{ ...item }} />
           ))}

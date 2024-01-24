@@ -9,7 +9,7 @@ const page = () => {
   ));
 
   return (
-    <div className="mt-24 xl:mt-32">
+    <div className="mt-24 xl:my-32">
       <SectionDesign />
       <SectionDev />
       <SectionMaintenence />

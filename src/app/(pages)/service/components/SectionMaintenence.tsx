@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import DetailsNavigation from "./DetailsNavigation";
+import Header from "./Header";
 
 const SectionMaintenence = () => {
   return (
@@ -27,28 +28,19 @@ const SectionMaintenence = () => {
                   width={500}
                   height={500}
                   alt="UI Design Illustration"
+                  className="h-[400px] w-[400px]"
                 />
               </div>
             </div>
           </div>
-          <div className="main-content flex h-full w-full flex-col items-start justify-center gap-8 xl:order-2 xl:gap-14">
-            <div className="header-content flex flex-col gap-7">
-              <div className="flex w-full flex-col items-center justify-center gap-1 xl:items-start">
-                <h1 className="text-center font-semibold uppercase text-[#16FCD2] md:text-start">
-                  MAINTENANCE
-                </h1>
-                <h1 className="text-center text-3xl font-bold xl:w-3/4 xl:text-start">
-                  Think of your server as your own child, taking care of it
-                  every day
-                </h1>
-              </div>
-              <p className="text-center font-light text-white/70 xl:w-3/4 xl:text-start">
-                We will back up your servers every day, clean them every week,
-                upgrade them when there is an update.
-              </p>
-            </div>
-            <div className="card-group flex w-full flex-col items-start justify-center">
-              <div className="card-item grid grid-cols-2 items-center justify-center gap-6">
+          <div className="main-content flex h-full w-full flex-col items-center justify-center gap-8 xl:order-2 xl:items-start xl:gap-14">
+            <Header
+              tagline="Maintenance"
+              title="Think of your server as your own child, taking care of it every day"
+              description="We will back up your servers every day, clean them every week, upgrade them when there is an update."
+            />
+            <div className="card-group flex w-full flex-col items-start justify-center md:items-center xl:items-start">
+              <div className="card-item grid grid-cols-2 items-center justify-center gap-6 md:w-3/4 xl:w-full">
                 <div className="group flex cursor-pointer items-center gap-6">
                   <div className="icon-div cursor-pointer bg-white/10 p-3">
                     <IconDownload

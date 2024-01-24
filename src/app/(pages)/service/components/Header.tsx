@@ -1,17 +1,25 @@
 import React from "react";
+
 interface Props {
+  tagline: string;
   title: string;
-  description: string;
+  description?: string;
 }
-const Header = ({ title, description }: Props) => {
+
+const Header = ({ tagline, title, description }: Props) => {
   return (
-    <div className="header-content flex h-full w-full flex-col items-center justify-center">
-      <div className="flex w-full flex-col items-center justify-center text-center">
-        <h1 className="uppercase text-[#16FCD2]">{title}</h1>
-        <h1 className="w-3/4 max-w-[420px] font-bold md:w-1/2 xl:w-full xl:text-3xl">
-          {description}
+    <div className="header-content flex flex-col items-center justify-center gap-7 xl:items-start xl:justify-start">
+      <div className="flex w-full flex-col items-center justify-center gap-1 xl:items-start">
+        <span className="text-center font-semibold uppercase text-[#16FCD2] md:text-start">
+          {tagline}
+        </span>
+        <h1 className="text-center text-2xl font-bold md:w-3/4 md:text-3xl xl:text-start">
+          {title}
         </h1>
       </div>
+      <p className="text-center font-light text-white/70 md:w-3/4 xl:text-start">
+        {description}
+      </p>
     </div>
   );
 };
