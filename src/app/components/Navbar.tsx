@@ -45,7 +45,7 @@ const Navbar = () => {
     <header
       className={`${
         isScrolled ? "bg-white/10 backdrop-blur-md" : ""
-      } fixed left-0 top-0 z-40 flex h-fit w-full items-center justify-center transition-colors duration-1000 ease-in-out`}
+      } fixed left-0 top-0 z-40 flex h-fit w-full items-center justify-center transition-colors duration-500 ease-in-out`}
     >
       <nav
         ref={navbarRef}

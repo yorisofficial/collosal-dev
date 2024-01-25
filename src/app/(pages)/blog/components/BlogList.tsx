@@ -27,11 +27,11 @@ const BlogList = () => {
           >
             <div className="">
               <Image
-                src="https://via.placeholder.com/500x500"
+                src={blog.meta.thumbnail}
                 alt="image"
-                height={300}
-                width={300}
-                className="h-[300px] w-[400px] rounded-lg rounded-b-none object-cover"
+                height={500}
+                width={500}
+                className="h-[300px] w-[400px] rounded-lg rounded-b-none object-contain"
               />
             </div>
             <div className="space-y-4">

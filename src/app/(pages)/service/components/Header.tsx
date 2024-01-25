@@ -4,11 +4,14 @@ interface Props {
   tagline: string;
   title: string;
   description?: string;
+  className?: string;
 }
 
-const Header = ({ tagline, title, description }: Props) => {
+const Header = ({ tagline, title, description, className }: Props) => {
   return (
-    <div className="header-content flex flex-col items-center justify-center gap-7 xl:items-start xl:justify-start">
+    <div
+      className={`header-content flex flex-col items-center justify-center gap-7 xl:items-start xl:justify-start ${className}`}
+    >
       <div className="flex w-full flex-col items-center justify-center gap-1 xl:items-start">
         <span className="text-center font-semibold uppercase text-[#16FCD2] md:text-start">
           {tagline}

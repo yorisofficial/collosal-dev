@@ -205,3 +205,36 @@ export const FAQSERVICE = [
         "description": "1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty."
     },
 ]
+
+export const OURTEAM = [
+    {
+        "name": "Albert Flores",
+        "position": "Founder",
+        "img": "/image/about/team/albertflores.png",
+    },
+    {
+        "name": "Devon Lane",
+        "position": "Chief Technology Officer",
+        "img": "/image/about/team/Devon Lane.png",
+    },
+    {
+        "name": "Darrell Steward",
+        "position": "UI Designer",
+        "img": "/image/about/team/Darrell Steward.png",
+    },
+    {
+        "name": "Marvin McKinney",
+        "position": "Software Engineer",
+        "img": "/image/about/team/Marvin McKinney.png",
+    },
+    {
+        "name": "Floyd Miles",
+        "position": "System Analyst",
+        "img": "/image/about/team/Floyd Miles.png",
+    },
+    {
+        "name": "Annette Black",
+        "position": "Project Manager",
+        "img": "/image/about/team/Annette Black.png",
+    },
+]
