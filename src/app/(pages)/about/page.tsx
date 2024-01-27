@@ -9,28 +9,28 @@ import CardTeamList from "./components/CardTeamList";
 const page = () => {
   const imgSponsor = IMAGES_SPONSORS;
   return (
-    <div className="container z-0 mx-auto mt-16 min-h-screen w-full max-w-7xl px-[5%] py-8 xl:mt-32 xl:space-y-40 xl:px-0">
+    <div className="container z-0 mx-auto mt-8 min-h-screen w-full max-w-7xl px-[5%] py-8 xl:mt-32 xl:space-y-40 xl:px-0">
       <div className="grid min-h-screen w-full grid-cols-1 sm:relative sm:h-full md:min-h-full md:space-y-16 xl:grid-cols-2 xl:space-y-0">
         <div className="absolute left-0 top-1/4 -z-10 h-[250px] w-[250px] rounded-full bg-yellow-500/20 blur-3xl xl:h-[400px] xl:w-[400px]"></div>
         <div className="absolute left-1/2 top-1/2 -z-10 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/20 blur-3xl xl:h-[400px] xl:w-[400px] xl:-translate-x-1/2"></div>
         <div className="absolute right-0 top-0 -z-10 h-[250px] w-[250px] rounded-full bg-pink-500/20 blur-3xl xl:h-[400px] xl:w-[400px]"></div>
-        <div className="relative flex h-full w-full items-center justify-center md:h-fit xl:w-fit">
+        <div className="relative flex h-3/4 w-full items-center justify-center md:h-fit xl:w-fit">
           <Image
             src={"/image/about/relative-img.png"}
             height={320}
             width={420}
-            className="h-[400px] w-3/4 rounded-lg object-cover xl:h-[400px] xl:w-[420px]"
+            className="h-[240px] w-3/4 rounded-lg object-cover md:h-[400px] xl:w-[420px]"
             alt="about bottom hero section illustration"
           />
           <Image
             src={"/image/about/bottom-img.png"}
             height={280}
             width={320}
-            className="absolute -right-2 bottom-8 h-[200px] w-[140px] rounded-lg object-cover md:-bottom-16 md:right-8 xl:-bottom-16 xl:-right-16 xl:h-[240px] xl:w-[200px]"
+            className="absolute -bottom-2 right-4 h-[200px] w-[140px] rounded-lg object-cover md:-bottom-16 md:right-8 md:h-[240px] xl:-bottom-8 xl:-right-16 xl:h-[240px] xl:w-[200px]"
             alt="about hero section illustration"
           />
         </div>
-        <div className="body-content flex items-center justify-start">
+        <div className="body-content flex items-start justify-start xl:items-center">
           <Header
             title="We are creative, smart and hardworking people"
             tagline="ABOUT"
@@ -45,7 +45,7 @@ const page = () => {
             <span className="text-center font-semibold uppercase text-[#16FCD2]">
               STATISTICS
             </span>
-            <h1 className="text-center text-2xl font-bold md:w-1/2 md:text-4xl">
+            <h1 className="text-center text-2xl font-bold md:w-3/4 md:text-4xl xl:w-1/2">
               In 3 years we reached 8 countries, 193 clients and earning $100k
               USD
             </h1>
