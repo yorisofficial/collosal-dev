@@ -20,6 +20,7 @@ import DesktopMock from "./components/mockup/DesktopMock";
 import CardPricing from "./components/main/CardPricing";
 
 export default function Home() {
+ 
   const [activeSlide, setActiveSlide] = useState(0);
   const handleSlideChange = (swiper: any) => {
     setActiveSlide(swiper.activeIndex);

@@ -1,6 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
+  disable?: boolean;
   children: React.ReactNode;
   className?: string;
   variant?:
@@ -29,6 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   ariaLabel,
   variant = "primary",
   size = "large",
+  disable,
 }) => {
   const getButtonVariant = {
     primary: "rounded border-[#6016FC] bg-[#6016FC]",
@@ -62,6 +64,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <div>
       <button
+        disabled={disable}
         aria-label={ariaLabel}
         onClick={onClick}
         className={`${buttonVariant} whitespace-nowrap border font-semibold capitalize duration-500 hover:scale-95 focus:ring focus:ring-white`}

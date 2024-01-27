@@ -2,7 +2,11 @@ import React from "react";
 import Button from "../Button";
 import Link from "next/link";
 
-const DesktopMock = ({ className }: { className: string }) => {
+interface Props {
+  className?: string;
+}
+
+const DesktopMock = ({ className }: Props) => {
   return (
     <div
       className={`desktop-mode w-full md:min-w-[300px] xl:min-w-[500px] ${className}`}
@@ -17,11 +21,9 @@ const DesktopMock = ({ className }: { className: string }) => {
           The Desktop App Landing Page
         </h1>
         <p className="text-base font-light">A landing page for desktop app</p>
-        <Link href={"/"}>
-          <Button variant="borderlessRoundedWhite" size="small">
-            Detail
-          </Button>
-        </Link>
+        <Button variant="borderlessRoundedWhite" size="small">
+          Detail
+        </Button>
       </div>
     </div>
   );

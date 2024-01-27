@@ -2,7 +2,11 @@ import React from "react";
 import Button from "../Button";
 import Link from "next/link";
 
-const PhoneMock = ({ className }: { className: string }) => {
+interface Props {
+  className?: string;
+}
+
+const PhoneMock = ({ className }: Props) => {
   return (
     <div className={`phone-mode w-full xl:min-w-[300px]`}>
       <div className="phone-mockup flex w-full flex-col items-center justify-center gap-6 rounded-t-md bg-white/10 p-8 pb-0">
@@ -17,11 +21,9 @@ const PhoneMock = ({ className }: { className: string }) => {
         <p className="flex flex-nowrap text-base font-light">
           A landing page for mobile app
         </p>
-        <Link href={"/"}>
-          <Button variant="borderlessRoundedWhite" size="small">
-            Detail
-          </Button>
-        </Link>
+        <Button variant="borderlessRoundedWhite" size="small">
+          Detail
+        </Button>
       </div>
     </div>
   );

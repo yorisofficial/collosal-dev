@@ -38,7 +38,7 @@ const page = () => {
           />
         </div>
       </div>
-      <hr className="my-8 xl:my-16" />
+      <hr className="mx-auto my-8 w-3/4 opacity-30 xl:my-16" />
       <div className="flex h-full min-h-screen w-full flex-col items-center justify-center md:min-h-fit md:py-16">
         <div className={`header-content flex items-center justify-center`}>
           <div className="flex w-full flex-col items-center justify-center gap-1">
