@@ -4,8 +4,8 @@ import ListProject from "./components/ListProject";
 
 const page = () => {
   return (
-    <div className="container mx-auto my-24 min-h-screen max-w-5xl px-[5%]">
-      <div className="content grid h-full min-h-screen w-full grid-cols-1 md:min-h-full md:grid-cols-2">
+    <div className="container mx-auto my-24 h-full max-w-5xl px-[5%]">
+      <div className="content grid h-full min-h-screen w-full grid-cols-1 items-center justify-center md:min-h-full md:grid-cols-2">
         <div className="flex h-full w-full items-center justify-center md:items-start md:justify-start">
           <Header
             tagline="PROJECTS"

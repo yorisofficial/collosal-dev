@@ -11,8 +11,10 @@ const Navbar = () => {
   const navbarRef = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  window.scrollTo(0, 0);
   useEffect(() => {
+    if (localStorage.getItem("isScrolled") === "true") {
+      setIsScrolled(true);
+    }
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setIsScrolled(true);
